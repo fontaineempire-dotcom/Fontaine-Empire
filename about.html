@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Fontaine Empire — the origin story, vision, and inspiration behind the music empire.">
+  <title>About | Fontaine Empire</title>
+  <style>
+    :root{
+      --ice:#e9fbff;
+      --sky:#bdeeff;
+      --blue:#0879d1;
+      --deep:#062b52;
+      --white:#ffffff;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:var(--deep);
+      background:linear-gradient(135deg,var(--white),var(--ice),var(--sky));
+    }
+    nav{
+      position:sticky;
+      top:0;
+      z-index:10;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid rgba(8,121,209,.15);
+      backdrop-filter:blur(10px);
+    }
+    .nav-wrap{
+      max-width:1100px;
+      margin:auto;
+      padding:18px 24px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+    }
+    .brand{
+      color:var(--deep);
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.12em;
+    }
+    .back{
+      color:var(--blue);
+      text-decoration:none;
+      font-weight:700;
+    }
+    main{max-width:1100px;margin:auto;padding:70px 24px 90px}
+    .eyebrow{
+      color:var(--blue);
+      text-transform:uppercase;
+      letter-spacing:.28em;
+      font-size:.8rem;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+    h1{
+      margin:0 0 45px;
+      font-size:clamp(2.5rem,7vw,5rem);
+      line-height:.95;
+      letter-spacing:-.04em;
+    }
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:55px;
+      align-items:center;
+    }
+    .story{
+      background:rgba(255,255,255,.72);
+      border:1px solid rgba(8,121,209,.15);
+      border-radius:24px;
+      padding:42px;
+      box-shadow:0 18px 50px rgba(6,43,82,.10);
+    }
+    .story h2{font-size:2rem;margin:0 0 20px}
+    .story p{font-size:1.08rem;line-height:1.85;margin:0 0 18px}
+    .image-wrap{
+      position:relative;
+      border-radius:28px;
+      overflow:hidden;
+      box-shadow:0 25px 60px rgba(6,43,82,.18);
+      background:var(--sky);
+    }
+    .image-wrap img{
+      display:block;
+      width:100%;
+      height:auto;
+      mix-blend-mode:multiply;
+    }
+    .inspiration{
+      margin-top:55px;
+      text-align:center;
+    }
+    .inspiration h2{font-size:2rem;margin-bottom:10px}
+    .inspiration p{opacity:.8;margin-bottom:25px}
+    .quote-image{
+      max-width:700px;
+      width:100%;
+      margin:auto;
+      display:block;
+      border-radius:22px;
+      box-shadow:0 18px 45px rgba(6,43,82,.15);
+    }
+    footer{
+      text-align:center;
+      padding:28px 20px;
+      background:var(--blue);
+      color:white;
+      font-size:.9rem;
+    }
+    @media(max-width:760px){
+      .about-grid{grid-template-columns:1fr;gap:30px}
+      .story{padding:28px}
+      main{padding-top:50px}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-wrap">
+    <a class="brand" href="index.html">FONTAINE EMPIRE</a>
+    <a class="back" href="index.html">← Back Home</a>
+  </div>
+</nav>
+
+<main>
+  <div class="eyebrow">About Fontaine Empire</div>
+  <h1>The Origin Story</h1>
+
+  <section class="about-grid">
+    <div class="story">
+      <h2>It started in a basement.</h2>
+      <p>
+        Before Fontaine Empire became a vision, it started with a young artist
+        listening to music at home and realizing that the music of today
+        couldn't match the feelings he carried inside.
+      </p>
+      <p>
+        So he started his own journey. He began rapping in his basement,
+        turning his thoughts, emotions, and experiences into music of his own.
+        That journey changed the way he understood and appreciated music.
+      </p>
+      <p>
+        What began as a personal outlet grew into a bigger vision — a place
+        where sound, creativity, ambition, and individuality could come
+        together. That vision became <strong>Fontaine Empire</strong>.
+      </p>
+    </div>
+
+    <div class="image-wrap">
+      <img src="about-inspiration.jpeg"
+           alt="Inspirational message about taking action today">
+    </div>
+  </section>
+
+  <section class="inspiration">
+    <h2>Keep Moving Forward</h2>
+    <p>A reminder behind the journey: make today count for the person you're becoming.</p>
+    <img class="quote-image" src="about-inspiration.jpeg"
+         alt="If you're reading this, do something today that your future self will thank you for">
+  </section>
+</main>
+
+<footer>
+  © Fontaine Empire. All Rights Reserved.
+</footer>
+
+</body>
+</html>
