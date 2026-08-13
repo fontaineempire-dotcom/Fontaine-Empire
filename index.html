@@ -4,22 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FONTAINE EMPIRE | Music to Save the World</title>
-<meta name="description" content="Fontaine Empire — Music to Save the World. The Sound. The Vision. The Empire.">
+
+<meta name="description"
+content="Fontaine Empire — Music to Save the World. The Sound. The Vision. The Empire.">
 
 <style>
-*{box-sizing:border-box}
 
-html,body{
+*{
+  box-sizing:border-box;
+}
+
+html,
+body{
   margin:0;
   width:100%;
   height:100%;
   overflow:hidden;
-  background:#dceeff
+  background:#dceeff;
 }
 
 body{
-  font-family:Arial,sans-serif
+  font-family:Arial,sans-serif;
 }
+
+/* =========================
+   HOME
+========================= */
 
 .home{
   position:relative;
@@ -27,7 +37,7 @@ body{
   height:100vh;
   min-height:520px;
   overflow:hidden;
-  background:#dceeff
+  background:#dceeff;
 }
 
 .home-image{
@@ -39,8 +49,12 @@ body{
   object-position:center;
   display:block;
   user-select:none;
-  -webkit-user-drag:none
+  -webkit-user-drag:none;
 }
+
+/* =========================
+   CLICKABLE AREAS
+========================= */
 
 .hotspot{
   position:absolute;
@@ -49,105 +63,241 @@ body{
   background:transparent;
   border:0;
   outline:0;
-  color:#000;
+  color:transparent;
   text-decoration:none;
 }
 
 .hotspot:focus-visible{
   outline:2px solid #1676c5;
   outline-offset:4px;
-  border-radius:4px
+  border-radius:4px;
 }
 
+/* TOP NAVIGATION HOTSPOTS */
+
 .home-link{
-  top:3.0%;
-  height:5.8%
+  top:3%;
+  height:5.8%;
 }
 
 .home-link:nth-of-type(1){
-  left:49.0%;
-  width:5.1%
+  left:49%;
+  width:5.1%;
 }
 
 .home-link:nth-of-type(2){
   left:54.7%;
-  width:5.0%
+  width:5%;
 }
 
 .home-link:nth-of-type(3){
-  left:60.0%;
-  width:5.8%
+  left:60%;
+  width:5.8%;
 }
 
 .home-link:nth-of-type(4){
-  left:66.0%;
-  width:5.8%
+  left:66%;
+  width:5.8%;
 }
 
 .home-link:nth-of-type(5){
-  left:72.0%;
-  width:5.5%
+  left:72%;
+  width:5.5%;
 }
 
 .home-link:nth-of-type(6){
-  left:78.0%;
-  width:4.8%
+  left:78%;
+  width:4.8%;
 }
 
 .home-link:nth-of-type(7){
   left:83.2%;
-  width:5.2%
+  width:5.2%;
 }
 
 .home-link:nth-of-type(8){
-  left:89.0%;
-  width:5.7%
+  left:89%;
+  width:5.7%;
 }
 
+/* BOTTOM BUTTONS */
+
 .submit-link{
-  left:4.0%;
-  top:69.0%;
+  left:4%;
+  top:71.5%;
   width:16.5%;
-  height:8.5%
+  height:8.5%;
 }
 
 .origin-link{
   left:21.2%;
-  top:69.0%;
-  width:14.0%;
-  height:8.5%
+  top:71.5%;
+  width:14%;
+  height:8.5%;
 }
+
+/* =========================
+   MOBILE TOGGLE
+========================= */
+
+.menu-toggle{
+  display:none;
+  position:fixed;
+  top:15px;
+  right:15px;
+  z-index:30;
+
+  width:48px;
+  height:48px;
+
+  background:#ffffffee;
+  border:1px solid #b9dcea;
+  border-radius:12px;
+
+  color:#0b527c;
+  font-size:24px;
+  font-weight:900;
+
+  cursor:pointer;
+
+  box-shadow:0 8px 20px rgba(11,82,124,.15);
+}
+
+/* MOBILE MENU */
+
+.mobile-links{
+  display:none;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px){
 
-  .home{
-    min-height:0
+  html,
+  body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
   }
+
+  .home{
+    width:100vw;
+    height:100vh;
+    min-height:0;
+    overflow:hidden;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    background:#dceeff;
+  }
+
+  /*
+    On phones the entire image is shown.
+    This prevents the desktop-style cropping.
+  */
 
   .home-image{
-    object-position:center center
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:contain;
+    object-position:top center;
+
+    background:#dceeff;
   }
+
+  /*
+    Hide the invisible desktop navigation
+    hotspots on the phone because the
+    toggle menu handles navigation.
+  */
 
   .home-link{
-    top:2.5%;
-    height:7%
+    display:none;
   }
 
+  /*
+    Keep the two actual buttons clickable.
+  */
+
   .submit-link{
-    top:70%;
+    display:block;
+    top:72%;
     left:5%;
     width:27%;
-    height:9%
+    height:9%;
   }
 
   .origin-link{
-    top:70%;
+    display:block;
+    top:72%;
     left:33%;
     width:24%;
-    height:9%
+    height:9%;
+  }
+
+  /* SHOW HAMBURGER */
+
+  .menu-toggle{
+    display:block;
+  }
+
+  /* MOBILE DROPDOWN */
+
+  .mobile-links{
+    position:fixed;
+
+    top:72px;
+    left:4%;
+    right:4%;
+
+    z-index:25;
+
+    display:none;
+    flex-direction:column;
+
+    background:#ffffff;
+
+    border:1px solid #cfeaf4;
+    border-radius:0 0 14px 14px;
+
+    box-shadow:
+      0 12px 25px rgba(11,82,124,.15);
+
+    overflow:hidden;
+  }
+
+  .mobile-links.open{
+    display:flex;
+  }
+
+  .mobile-links a{
+    padding:14px 18px;
+
+    border-bottom:1px solid #e4f2f7;
+
+    color:#173b52;
+
+    font-weight:800;
+    text-decoration:none;
+  }
+
+  .mobile-links a:last-child{
+    border-bottom:0;
+  }
+
+  .mobile-links a:active{
+    background:#e9faff;
   }
 
 }
+
 </style>
 </head>
 
@@ -155,49 +305,154 @@ body{
 
 <main class="home" aria-label="Fontaine Empire Home">
 
-  <img class="home-image" src="home-reference.png" alt="Fontaine Empire homepage — Music to Save the World">
+  <img
+    class="home-image"
+    src="home-reference.png"
+    alt="Fontaine Empire homepage — Music to Save the World"
+  >
 
-  <a class="hotspot home-link" href="index.html" aria-label="Home">
+  <!-- DESKTOP / IMAGE NAVIGATION -->
+
+  <a
+    class="hotspot home-link"
+    href="index.html"
+    aria-label="Home">
     <span>Home</span>
   </a>
 
-  <a class="hotspot home-link" href="music.html" aria-label="Music">
+  <a
+    class="hotspot home-link"
+    href="music.html"
+    aria-label="Music">
     <span>Music</span>
   </a>
 
-  <a class="hotspot home-link" href="gallery.html" aria-label="Gallery">
+  <a
+    class="hotspot home-link"
+    href="gallery.html"
+    aria-label="Gallery">
     <span>Gallery</span>
   </a>
 
-  <a class="hotspot home-link" href="artists.html" aria-label="Artists">
+  <a
+    class="hotspot home-link"
+    href="artists.html"
+    aria-label="Artists">
     <span>Artists</span>
   </a>
 
-  <a class="hotspot home-link" href="merch.html" aria-label="Merch">
+  <a
+    class="hotspot home-link"
+    href="merch.html"
+    aria-label="Merch">
     <span>Merch</span>
   </a>
 
-  <a class="hotspot home-link" href="apply.html" aria-label="Apply">
+  <a
+    class="hotspot home-link"
+    href="apply.html"
+    aria-label="Apply">
     <span>Apply</span>
   </a>
 
-  <a class="hotspot home-link" href="about.html" aria-label="About">
+  <a
+    class="hotspot home-link"
+    href="about.html"
+    aria-label="About">
     <span>About</span>
   </a>
 
-  <a class="hotspot home-link" href="contact.html" aria-label="Contact">
+  <a
+    class="hotspot home-link"
+    href="contact.html"
+    aria-label="Contact">
     <span>Contact</span>
   </a>
 
-  <a class="hotspot submit-link" href="apply.html" aria-label="Submit Your Music">
+
+  <!-- BOTTOM BUTTONS -->
+
+  <a
+    class="hotspot submit-link"
+    href="apply.html"
+    aria-label="Submit Your Music">
     <span>Submit Your Music</span>
   </a>
 
-  <a class="hotspot origin-link" href="about.html" aria-label="Our Origin Story">
+  <a
+    class="hotspot origin-link"
+    href="about.html"
+    aria-label="Our Origin Story">
     <span>Our Origin Story</span>
   </a>
 
 </main>
+
+
+<!-- MOBILE MENU BUTTON -->
+
+<button
+  class="menu-toggle"
+  type="button"
+  aria-label="Open menu"
+  aria-expanded="false">
+  ☰
+</button>
+
+
+<!-- MOBILE MENU -->
+
+<div class="mobile-links">
+
+  <a href="index.html">Home</a>
+
+  <a href="music.html">Music</a>
+
+  <a href="gallery.html">Gallery</a>
+
+  <a href="artists.html">Artists</a>
+
+  <a href="merch.html">Merch</a>
+
+  <a href="apply.html">Apply</a>
+
+  <a href="about.html">About</a>
+
+  <a href="contact.html">Contact</a>
+
+</div>
+
+
+<script>
+
+const toggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-links");
+
+if(toggle && mobileMenu){
+
+  toggle.addEventListener("click", () => {
+
+    const isOpen =
+      mobileMenu.classList.toggle("open");
+
+    toggle.setAttribute(
+      "aria-expanded",
+      isOpen
+    );
+
+    toggle.setAttribute(
+      "aria-label",
+      isOpen ? "Close menu" : "Open menu"
+    );
+
+    toggle.textContent =
+      isOpen ? "✕" : "☰";
+
+  });
+
+}
+
+</script>
 
 </body>
 </html>
