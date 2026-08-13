@@ -112,11 +112,9 @@ footer{flex-direction:column;gap:8px}
 
 <script>
 const toggle=document.querySelector(".menu-toggle");
-const mobileMenu=document.querySelector(".mobile-links");
 
-if(toggle&&mobileMenu){
+if(toggle){
 toggle.addEventListener("click",()=>{
-const isOpen=mobileMenu.classList.toggle("open");
 toggle.setAttribute("aria-expanded",isOpen);
 });
 }
