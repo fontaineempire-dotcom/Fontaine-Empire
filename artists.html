@@ -61,7 +61,6 @@ nav{
   height:42px;
 
   border-radius:50%;
-
   object-fit:contain;
 
   flex:0 0 auto;
@@ -226,11 +225,27 @@ h1{
 }
 
 /* =========================
-   FIRST ARTIST
+   CASH FONTAINE PLACEHOLDER
 ========================= */
 
 .cash-photo{
-  object-position:center;
+  width:100%;
+  height:420px;
+
+  border-radius:18px;
+
+  border:1px solid #cfeaf4;
+
+  background:linear-gradient(135deg,#bdeeff,#fff);
+
+  display:grid;
+  place-items:center;
+
+  color:#0b527c;
+
+  font-weight:900;
+
+  font-size:18px;
 }
 
 /* =========================
@@ -255,9 +270,7 @@ footer{
 
   nav{
     height:auto;
-
     min-height:72px;
-
     position:sticky;
   }
 
@@ -342,7 +355,8 @@ footer{
     border-radius:20px;
   }
 
-  .artist-photo{
+  .artist-photo,
+  .cash-photo{
     height:auto;
 
     max-height:none;
@@ -364,7 +378,6 @@ footer{
 
   footer{
     flex-direction:column;
-
     gap:8px;
   }
 
@@ -463,27 +476,13 @@ footer{
 
 
     <!-- =========================
-         ARTIST 1
+         ARTIST 1 — CASH FONTAINE
     ========================== -->
 
     <article class="artist-card">
 
-      <div>
-
-        <div
-          class="artist-photo"
-          style="
-            background:linear-gradient(135deg,#bdeeff,#fff);
-            display:grid;
-            place-items:center;
-            color:#0b527c;
-            font-weight:900;
-            font-size:18px;
-          "
-        >
-          CASH FONTAINE
-        </div>
-
+      <div class="cash-photo">
+        CASH FONTAINE
       </div>
 
 
@@ -498,10 +497,12 @@ footer{
         </p>
 
         <p class="artist-bio">
+
           Cash Fontaine is the founder, CEO and artist
           behind Fontaine Empire — building a vision
           around music, creativity, authenticity and
           purpose.
+
         </p>
 
       </div>
@@ -510,23 +511,20 @@ footer{
 
 
     <!-- =========================
-         ARTIST 2
+         ARTIST 2 — TUMANI FONTAINE
     ========================== -->
 
     <article class="artist-card">
 
       <img
-  class="artist-photo"
-  src="artist-2.jpeg"
-  alt="Tumani Fontaine">
-      
-      >
-
+        class="artist-photo"
+        src="artist-2.jpeg"
+        alt="Tumani Fontaine">
 
       <div class="artist-info">
 
         <h2>
-          Artist Name
+          Tumani Fontaine
         </h2>
 
         <p class="artist-title">
@@ -562,6 +560,44 @@ footer{
           Music is my motivation, my reflection, and
           the reason I keep pushing forward to make a
           change and prove what I’m capable of.
+
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- =========================
+         ARTIST 3 — J.BELOVED
+    ========================== -->
+
+    <article class="artist-card">
+
+      <img
+        class="artist-photo"
+        src="artist-3.jpeg"
+        alt="J.beLoved">
+
+      <div class="artist-info">
+
+        <h2>
+          J.beLoved
+        </h2>
+
+        <p class="artist-title">
+          Artist
+        </p>
+
+        <p class="artist-bio">
+
+          <em>
+            Music is everything to me 💯
+          </em>
+
+          <br><br>
+
+          Can't live without it.
 
         </p>
 
