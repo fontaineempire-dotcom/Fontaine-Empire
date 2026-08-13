@@ -1,22 +1,14 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-
 <title>FONTAINE EMPIRE | Music to Save the World</title>
 
-<meta
-  name="description"
-  content="Fontaine Empire — Music to Save the World. The Sound. The Vision. The Empire."
->
+<meta name="description"
+content="Fontaine Empire — Music to Save the World. The Sound. The Vision. The Empire.">
 
 <style>
-
-/* ==============================
-   BASIC
-============================== */
 
 *{
   box-sizing:border-box;
@@ -26,19 +18,14 @@ html,
 body{
   margin:0;
   width:100%;
-  height:100%;
-  overflow:hidden;
+  min-height:100%;
   background:#dceeff;
-}
-
-body{
   font-family:Arial,sans-serif;
 }
 
-
-/* ==============================
+/* =========================
    HOME
-============================== */
+========================= */
 
 .home{
   position:relative;
@@ -52,56 +39,148 @@ body{
 .home-image{
   position:absolute;
   inset:0;
-
   width:100%;
   height:100%;
-
   object-fit:cover;
-  object-position:center;
-
+  object-position:center center;
   display:block;
-
   user-select:none;
   -webkit-user-drag:none;
 }
 
+/* =========================
+   DESKTOP NAVIGATION
+========================= */
 
-/* ==============================
-   CLICKABLE HOTSPOTS
-============================== */
+.desktop-nav{
+  position:absolute;
+  top:3%;
+  right:4%;
+  z-index:20;
+
+  display:flex;
+  align-items:center;
+  gap:20px;
+}
+
+.desktop-nav a{
+  color:#0b527c;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:800;
+}
+
+.desktop-nav a:hover{
+  color:#1689d5;
+}
+
+/* =========================
+   MOBILE MENU BUTTON
+========================= */
+
+.menu-toggle{
+  display:none;
+
+  position:absolute;
+  top:24px;
+  right:24px;
+
+  width:78px;
+  height:78px;
+
+  border:0;
+  border-radius:18px;
+
+  background:#ffffffee;
+  color:#0b527c;
+
+  font-size:34px;
+  font-weight:bold;
+
+  cursor:pointer;
+
+  z-index:50;
+
+  box-shadow:0 8px 25px rgba(11,82,124,.15);
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.mobile-menu{
+  display:none;
+
+  position:absolute;
+
+  top:105px;
+  left:5%;
+  right:5%;
+
+  background:#ffffff;
+
+  border:1px solid #cfeaf4;
+  border-radius:18px;
+
+  box-shadow:0 15px 35px rgba(11,82,124,.18);
+
+  overflow:hidden;
+
+  z-index:40;
+}
+
+.mobile-menu.open{
+  display:flex;
+  flex-direction:column;
+}
+
+.mobile-menu a{
+  padding:17px 20px;
+
+  color:#0b527c;
+
+  text-decoration:none;
+
+  font-size:16px;
+  font-weight:800;
+
+  border-bottom:1px solid #e4f2f7;
+}
+
+.mobile-menu a:last-child{
+  border-bottom:0;
+}
+
+.mobile-menu a:active{
+  background:#e9faff;
+}
+
+/* =========================
+   INVISIBLE DESKTOP HOTSPOTS
+========================= */
 
 .hotspot{
   position:absolute;
-
   display:block;
 
-  z-index:5;
+  z-index:10;
 
   background:transparent;
   border:0;
   outline:0;
 
   color:transparent;
-
   text-decoration:none;
-
-  cursor:pointer;
-}
-
-.hotspot span{
-  color:transparent;
 }
 
 .hotspot:focus-visible{
   outline:2px solid #1676c5;
   outline-offset:4px;
-  border-radius:4px;
 }
 
-
-/* ==============================
-   DESKTOP TOP NAVIGATION
-============================== */
+/* =========================
+   DESKTOP TOP LINKS
+========================= */
 
 .home-link{
   top:3%;
@@ -148,279 +227,165 @@ body{
   width:5.7%;
 }
 
-
-/* ==============================
-   DESKTOP BOTTOM BUTTONS
-============================== */
+/* =========================
+   DESKTOP BUTTON HOTSPOTS
+========================= */
 
 .submit-link{
   left:4%;
-  top:71.5%;
+  top:69%;
   width:16.5%;
   height:8.5%;
 }
 
 .origin-link{
   left:21.2%;
-  top:71.5%;
+  top:69%;
   width:14%;
   height:8.5%;
 }
 
-
-/* ==============================
-   MOBILE MENU BUTTON
-============================== */
-
-.menu-toggle{
-  display:none;
-
-  position:fixed;
-
-  top:15px;
-  right:15px;
-
-  z-index:30;
-
-  width:48px;
-  height:48px;
-
-  background:#ffffffee;
-
-  border:1px solid #b9dcea;
-
-  border-radius:12px;
-
-  color:#0b527c;
-
-  font-size:24px;
-  font-weight:900;
-
-  cursor:pointer;
-
-  box-shadow:
-    0 8px 20px rgba(11,82,124,.15);
-}
-
-
-/* ==============================
-   MOBILE MENU
-============================== */
-
-.mobile-links{
-  display:none;
-}
-
-
-/* ==============================
+/* =========================
    MOBILE
-============================== */
+========================= */
 
 @media(max-width:700px){
 
   html,
   body{
     width:100%;
-    height:auto;
-
     min-height:100%;
-
     overflow-x:hidden;
-    overflow-y:auto;
-
     background:#dceeff;
   }
 
-
-  /* 
-     IMPORTANT:
-     The mobile page is now allowed
-     to be as tall as the full image.
-  */
-
   .home{
-    position:relative;
+
+    /*
+      THIS MAKES THE MOBILE HOME
+      PAGE MUCH LONGER.
+    */
 
     width:100vw;
 
-    height:auto;
-    min-height:0;
+    min-height:100svh;
+    height:100svh;
 
-    overflow:visible;
+    overflow:hidden;
 
     background:#dceeff;
   }
 
-
   /*
-     Show the ENTIRE image.
-
-     The image keeps its natural
-     proportions instead of being
-     stretched/cropped.
+    Keep the full homepage artwork
+    inside the taller mobile section.
   */
 
   .home-image{
-    position:relative;
-
-    top:auto;
-    left:auto;
-    right:auto;
-    bottom:auto;
-
     width:100%;
-    height:auto;
+    height:100%;
 
-    display:block;
+    object-fit:cover;
 
-    object-fit:contain;
-    object-position:top center;
-
-    background:#dceeff;
+    object-position:center center;
   }
 
+  /*
+    Hide desktop navigation
+  */
 
-  /* 
-     Hide desktop navigation hotspots
-     on the phone.
+  .desktop-nav{
+    display:none;
+  }
 
-     The hamburger menu handles navigation.
+  /*
+    Show mobile hamburger
+  */
+
+  .menu-toggle{
+    display:block;
+  }
+
+  /*
+    Remove desktop hotspots from
+    controlling the mobile screen.
   */
 
   .home-link{
     display:none;
   }
 
-
-  /* ============================
-     MOBILE BOTTOM BUTTONS
-  ============================ */
-
   /*
-     These remain invisible clickable
-     areas over the actual buttons
-     in the image.
+    Mobile Submit button
   */
 
   .submit-link{
     display:block;
 
-    left:4%;
+    left:7%;
+    top:43%;
 
-    /*
-      Position is based on the
-      full image now being displayed.
-    */
-    top:78%;
+    width:27%;
+    height:8%;
 
-    width:31%;
-    height:9%;
-
-    z-index:10;
+    color:transparent;
   }
+
+  /*
+    Mobile Origin Story button
+  */
 
   .origin-link{
     display:block;
 
-    left:39%;
+    left:31%;
+    top:43%;
 
-    top:78%;
+    width:27%;
+    height:8%;
 
-    width:29%;
-    height:9%;
-
-    z-index:10;
+    color:transparent;
   }
 
+}
 
-  /* ============================
-     HAMBURGER
-  ============================ */
+/* =========================
+   SMALLER PHONES
+========================= */
+
+@media(max-width:430px){
 
   .menu-toggle{
-    display:block;
+    top:22px;
+    right:20px;
+
+    width:68px;
+    height:68px;
+
+    border-radius:17px;
+
+    font-size:30px;
   }
 
-
-  /* ============================
-     DROPDOWN MENU
-  ============================ */
-
-  .mobile-links{
-    position:fixed;
-
-    top:72px;
-
+  .mobile-menu{
+    top:100px;
     left:4%;
     right:4%;
-
-    z-index:25;
-
-    display:none;
-
-    flex-direction:column;
-
-    background:#fff;
-
-    border:1px solid #cfeaf4;
-
-    border-radius:0 0 14px 14px;
-
-    box-shadow:
-      0 12px 25px rgba(11,82,124,.15);
-
-    overflow:hidden;
   }
 
-
-  .mobile-links.open{
-    display:flex;
-  }
-
-
-  .mobile-links a{
-    display:block;
-
-    padding:14px 18px;
-
-    border-bottom:1px solid #e4f2f7;
-
-    color:#173b52;
-
-    font-weight:800;
-
-    text-decoration:none;
-  }
-
-
-  .mobile-links a:last-child{
-    border-bottom:0;
-  }
-
-
-  .mobile-links a:active{
-    background:#e9faff;
+  .mobile-menu a{
+    padding:16px 18px;
+    font-size:15px;
   }
 
 }
 
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- ==================================
-     HOMEPAGE
-================================== -->
-
-<main
-  class="home"
-  aria-label="Fontaine Empire Home"
->
-
+<main class="home" aria-label="Fontaine Empire Home">
 
   <!-- HOMEPAGE IMAGE -->
 
@@ -431,178 +396,159 @@ body{
   >
 
 
-  <!-- ==================================
-       DESKTOP NAVIGATION HOTSPOTS
-  ================================== -->
+  <!-- =========================
+       DESKTOP NAVIGATION
+  ========================== -->
+
+  <nav class="desktop-nav">
+
+    <a href="index.html">Home</a>
+    <a href="music.html">Music</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="artists.html">Artists</a>
+    <a href="merch.html">Merch</a>
+    <a href="apply.html">Apply</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+
+  </nav>
+
+
+  <!-- =========================
+       MOBILE MENU BUTTON
+  ========================== -->
+
+  <button
+    class="menu-toggle"
+    type="button"
+    aria-label="Open menu"
+    aria-expanded="false"
+  >
+    ☰
+  </button>
+
+
+  <!-- =========================
+       MOBILE MENU
+  ========================== -->
+
+  <div class="mobile-menu">
+
+    <a href="index.html">Home</a>
+
+    <a href="music.html">Music</a>
+
+    <a href="gallery.html">Gallery</a>
+
+    <a href="artists.html">Artists</a>
+
+    <a href="merch.html">Merch</a>
+
+    <a href="apply.html">Apply</a>
+
+    <a href="about.html">About</a>
+
+    <a href="contact.html">Contact</a>
+
+  </div>
+
+
+  <!-- =========================
+       DESKTOP / IMAGE HOTSPOTS
+  ========================== -->
 
   <a
     class="hotspot home-link"
     href="index.html"
     aria-label="Home"
   >
-    <span>Home</span>
+    Home
   </a>
-
 
   <a
     class="hotspot home-link"
     href="music.html"
     aria-label="Music"
   >
-    <span>Music</span>
+    Music
   </a>
-
 
   <a
     class="hotspot home-link"
     href="gallery.html"
     aria-label="Gallery"
   >
-    <span>Gallery</span>
+    Gallery
   </a>
-
 
   <a
     class="hotspot home-link"
     href="artists.html"
     aria-label="Artists"
   >
-    <span>Artists</span>
+    Artists
   </a>
-
 
   <a
     class="hotspot home-link"
     href="merch.html"
     aria-label="Merch"
   >
-    <span>Merch</span>
+    Merch
   </a>
-
 
   <a
     class="hotspot home-link"
     href="apply.html"
     aria-label="Apply"
   >
-    <span>Apply</span>
+    Apply
   </a>
-
 
   <a
     class="hotspot home-link"
     href="about.html"
     aria-label="About"
   >
-    <span>About</span>
+    About
   </a>
-
 
   <a
     class="hotspot home-link"
     href="contact.html"
     aria-label="Contact"
   >
-    <span>Contact</span>
+    Contact
   </a>
 
 
-  <!-- ==================================
-       SUBMIT YOUR MUSIC
-  ================================== -->
+  <!-- =========================
+       BUTTON LINKS
+  ========================== -->
 
   <a
     class="hotspot submit-link"
     href="apply.html"
     aria-label="Submit Your Music"
   >
-    <span>Submit Your Music</span>
+    Submit Your Music
   </a>
-
-
-  <!-- ==================================
-       ORIGIN STORY
-  ================================== -->
 
   <a
     class="hotspot origin-link"
     href="about.html"
     aria-label="Our Origin Story"
   >
-    <span>Our Origin Story</span>
+    Our Origin Story
   </a>
-
 
 </main>
 
 
-<!-- ==================================
-     MOBILE TOGGLE BUTTON
-================================== -->
-
-<button
-  class="menu-toggle"
-  type="button"
-  aria-label="Open menu"
-  aria-expanded="false"
->
-  ☰
-</button>
-
-
-<!-- ==================================
-     MOBILE NAVIGATION
-================================== -->
-
-<nav class="mobile-links">
-
-  <a href="index.html">
-    Home
-  </a>
-
-  <a href="music.html">
-    Music
-  </a>
-
-  <a href="gallery.html">
-    Gallery
-  </a>
-
-  <a href="artists.html">
-    Artists
-  </a>
-
-  <a href="merch.html">
-    Merch
-  </a>
-
-  <a href="apply.html">
-    Apply
-  </a>
-
-  <a href="about.html">
-    About
-  </a>
-
-  <a href="contact.html">
-    Contact
-  </a>
-
-</nav>
-
-
-<!-- ==================================
-     MOBILE MENU SCRIPT
-================================== -->
-
 <script>
 
-const toggle =
-  document.querySelector(".menu-toggle");
-
-const mobileMenu =
-  document.querySelector(".mobile-links");
-
+const toggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-menu");
 
 if(toggle && mobileMenu){
 
@@ -611,64 +557,49 @@ if(toggle && mobileMenu){
     const isOpen =
       mobileMenu.classList.toggle("open");
 
-
     toggle.setAttribute(
       "aria-expanded",
       isOpen
     );
 
-
     toggle.setAttribute(
       "aria-label",
-      isOpen
-        ? "Close menu"
-        : "Open menu"
+      isOpen ? "Close menu" : "Open menu"
     );
 
-
     toggle.textContent =
-      isOpen
-        ? "✕"
-        : "☰";
-
-  });
-
-
-  /*
-     Close menu after selecting
-     a page.
-  */
-
-  const mobileLinks =
-    mobileMenu.querySelectorAll("a");
-
-
-  mobileLinks.forEach(function(link){
-
-    link.addEventListener("click", function(){
-
-      mobileMenu.classList.remove("open");
-
-      toggle.setAttribute(
-        "aria-expanded",
-        "false"
-      );
-
-      toggle.setAttribute(
-        "aria-label",
-        "Open menu"
-      );
-
-      toggle.textContent = "☰";
-
-    });
+      isOpen ? "×" : "☰";
 
   });
 
 }
 
-</script>
 
+/* Close menu when a link is selected */
+
+document.querySelectorAll(".mobile-menu a").forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    mobileMenu.classList.remove("open");
+
+    toggle.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    toggle.setAttribute(
+      "aria-label",
+      "Open menu"
+    );
+
+    toggle.textContent = "☰";
+
+  });
+
+});
+
+</script>
 
 </body>
 </html>
