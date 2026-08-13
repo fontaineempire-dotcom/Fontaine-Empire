@@ -7,44 +7,124 @@
 
 <style>
 *{box-sizing:border-box}
-body{margin:0;font-family:Arial,sans-serif;color:#173b52;background:linear-gradient(#fff,#e9faff)}
-a{text-decoration:none;color:inherit}
 
-nav{height:76px;padding:0 4%;display:flex;align-items:center;justify-content:space-between;background:#ffffffee;backdrop-filter:blur(12px);border-bottom:1px solid #cfeaf4;position:sticky;top:0;z-index:10}
-
-.brand{font-weight:900;letter-spacing:.08em;display:flex;align-items:center;gap:10px}
-.brand img{width:42px;height:42px;border-radius:50%;object-fit:contain}
-
-.links{display:flex;gap:16px;font-weight:700;font-size:14px}
-.links a:hover{color:#1689d5}
-
-.page{width:min(1100px,92%);margin:auto;padding:75px 0}
-
-.kicker{text-transform:uppercase;letter-spacing:.22em;font-size:13px;font-weight:900;color:#0b527c}
-
-h1{font-size:clamp(2.7rem,6vw,5rem);line-height:.92;margin:15px 0 35px;color:#0b527c}
-
-.card{padding:28px;border:1px solid #cfeaf4;border-radius:20px;background:#ffffffd9;box-shadow:0 18px 45px rgba(11,82,124,.08)}
-
-.origin-story{display:grid;grid-template-columns:minmax(260px,.9fr) minmax(320px,1.1fr);gap:38px;align-items:center;padding:30px}
-
-.origin-photo{width:100%;max-height:560px;object-fit:cover;border-radius:18px;border:1px solid #cfeaf4;box-shadow:0 18px 45px rgba(11,82,124,.12)}
-
-.origin-copy h3{font-family:'Caveat',cursive;font-size:clamp(2rem,3vw,3rem);color:#c79b27;margin:0 0 16px}
-
-.origin-copy p{font-size:1.06rem;line-height:1.8}
-
-footer{padding:28px 4%;border-top:1px solid #cfeaf4;display:flex;justify-content:space-between}
-
-@media(max-width:800px){
-.mobile-links{position:absolute;top:72px;left:4%;right:4%;display:none;flex-direction:column;background:#fff;border:1px solid #cfeaf4;border-radius:0 0 14px 14px;box-shadow:0 12px 25px rgba(11,82,124,.12);overflow:hidden}
-.mobile-links.open{display:flex}
-.mobile-links a{padding:14px 18px;border-bottom:1px solid #e4f2f7;font-weight:800}
-.mobile-links a:last-child{border-bottom:0}
-.origin-story{grid-template-columns:1fr;padding:22px}
-.origin-photo{max-height:520px;max-width:620px;margin:auto}
-footer{flex-direction:column;gap:8px}
+body{
+margin:0;
+font-family:Arial,sans-serif;
+color:#173b52;
+background:linear-gradient(#fff,#e9faff);
 }
+
+a{
+text-decoration:none;
+color:inherit;
+}
+
+nav{
+height:76px;
+padding:0 4%;
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#ffffffee;
+backdrop-filter:blur(12px);
+border-bottom:1px solid #cfeaf4;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.brand{
+font-weight:900;
+letter-spacing:.08em;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.brand img{
+width:42px;
+height:42px;
+border-radius:50%;
+object-fit:contain;
+}
+
+.links{
+display:flex;
+gap:16px;
+font-weight:700;
+font-size:14px;
+}
+
+.links a:hover{
+color:#1689d5;
+}
+
+.page{
+width:min(1100px,92%);
+margin:auto;
+padding:75px 0;
+}
+
+.kicker{
+text-transform:uppercase;
+letter-spacing:.22em;
+font-size:13px;
+font-weight:900;
+color:#0b527c;
+}
+
+h1{
+font-size:clamp(2.7rem,6vw,5rem);
+line-height:.92;
+margin:15px 0 35px;
+color:#0b527c;
+}
+
+.card{
+padding:28px;
+border:1px solid #cfeaf4;
+border-radius:20px;
+background:#ffffffd9;
+box-shadow:0 18px 45px rgba(11,82,124,.08);
+}
+
+.origin-story{
+display:grid;
+grid-template-columns:minmax(260px,.9fr) minmax(320px,1.1fr);
+gap:38px;
+align-items:center;
+padding:30px;
+}
+
+.origin-photo{
+width:100%;
+max-height:560px;
+object-fit:cover;
+border-radius:18px;
+border:1px solid #cfeaf4;
+box-shadow:0 18px 45px rgba(11,82,124,.12);
+}
+
+.origin-copy h3{
+font-family:'Caveat',cursive;
+font-size:clamp(2rem,3vw,3rem);
+color:#c79b27;
+margin:0 0 16px;
+}
+
+.origin-copy p{
+font-size:1.06rem;
+line-height:1.8;
+}
+
+footer{
+padding:28px 4%;
+border-top:1px solid #cfeaf4;
+display:flex;
+justify-content:space-between;
+}
+
 </style>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -56,6 +136,7 @@ footer{flex-direction:column;gap:8px}
 <body>
 
 <nav>
+
 <a class="brand" href="index.html">
 <img src="fep-logo.jpeg" alt="Fontaine Empire logo">
 <span>FONTAINE EMPIRE</span>
@@ -72,6 +153,8 @@ footer{flex-direction:column;gap:8px}
 <a href="contact.html">Contact</a>
 </div>
 
+</nav>
+
 <main>
 
 <section class="page">
@@ -82,23 +165,42 @@ footer{flex-direction:column;gap:8px}
 
 <div class="card origin-story">
 
-<img class="origin-photo" src="origin-story-photo.jpeg" alt="Fontaine Empire origin story photo">
+<img
+class="origin-photo"
+src="origin-story-photo.jpeg"
+alt="Fontaine Empire origin story photo">
 
 <div class="origin-copy">
 
 <h3>It started in a basement.</h3>
 
-<p>Before Fontaine Empire became a vision, it started with a young artist listening to music at home and feeling that the music of today could no longer express what he was feeling inside.</p>
+<p>
+Before Fontaine Empire became a vision, it started with a young artist
+listening to music at home and feeling that the music of today could no
+longer express what he was feeling inside.
+</p>
 
-<p><strong>So instead of simply listening, he decided to create.</strong></p>
+<p>
+<strong>So instead of simply listening, he decided to create.</strong>
+</p>
 
-<p>He started rapping in his basement, turning his thoughts, emotions and experiences into his own sound.</p>
+<p>
+He started rapping in his basement, turning his thoughts, emotions and
+experiences into his own sound.
+</p>
 
-<p>That journey became <strong>Fontaine Empire</strong> — a movement built around creativity, authenticity and the belief that music can reach people and become something bigger than one artist.</p>
+<p>
+That journey became <strong>Fontaine Empire</strong> — a movement built
+around creativity, authenticity and the belief that music can reach
+people and become something bigger than one artist.
+</p>
 
-<p><strong>THE SOUND. THE VISION. THE EMPIRE.</strong></p>
+<p>
+<strong>THE SOUND. THE VISION. THE EMPIRE.</strong>
+</p>
 
 </div>
+
 </div>
 
 </section>
@@ -106,19 +208,12 @@ footer{flex-direction:column;gap:8px}
 </main>
 
 <footer>
+
 <span>© 2026 FONTAINE EMPIRE</span>
+
 <span>“Music to Save the World”</span>
+
 </footer>
-
-<script>
-const toggle=document.querySelector(".menu-toggle");
-
-if(toggle){
-toggle.addEventListener("click",()=>{
-toggle.setAttribute("aria-expanded",isOpen);
-});
-}
-</script>
 
 </body>
 </html>
