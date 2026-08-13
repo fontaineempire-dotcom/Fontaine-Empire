@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
+
 <meta charset="utf-8">
+
 <meta name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover">
 
@@ -10,6 +12,7 @@
 
 <meta name="description"
       content="Fontaine Empire — Music to Save the World. The Sound. The Vision. The Empire.">
+
 
 <style>
 
@@ -31,8 +34,14 @@ body{
 
 body{
   font-family:Arial, Helvetica, sans-serif;
+
   background:#dceeff;
+
   overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
 }
 
 
@@ -44,6 +53,7 @@ body{
   position:relative;
 
   width:100vw;
+
   height:100vh;
   height:100svh;
 
@@ -68,11 +78,13 @@ body{
   height:100%;
 
   object-fit:cover;
+
   object-position:center center;
 
   display:block;
 
   user-select:none;
+
   -webkit-user-drag:none;
 }
 
@@ -90,6 +102,7 @@ body{
   z-index:20;
 
   display:flex;
+
   align-items:center;
 
   gap:24px;
@@ -101,6 +114,7 @@ body{
   text-decoration:none;
 
   font-size:15px;
+
   font-weight:700;
 
   white-space:nowrap;
@@ -110,6 +124,15 @@ body{
 
 .desktop-nav a:hover{
   color:#1689d5;
+}
+
+
+/* =========================================================
+   MOBILE BRAND
+========================================================= */
+
+.mobile-brand{
+  display:none;
 }
 
 
@@ -131,6 +154,7 @@ body{
   height:58px;
 
   border:none;
+
   border-radius:15px;
 
   background:#ffffff;
@@ -158,6 +182,7 @@ body{
   position:absolute;
 
   top:88px;
+
   left:18px;
   right:18px;
 
@@ -191,6 +216,7 @@ body{
   text-decoration:none;
 
   font-size:17px;
+
   font-weight:800;
 }
 
@@ -217,6 +243,7 @@ body{
   background:transparent;
 
   border:0;
+
   outline:0;
 
   color:transparent;
@@ -225,69 +252,86 @@ body{
 }
 
 
-/* Desktop navigation hotspot positions */
+/* =========================================================
+   DESKTOP NAVIGATION HOTSPOTS
+========================================================= */
 
 .home-link{
   top:3%;
+
   height:5.8%;
 }
 
 .home-link:nth-of-type(1){
   left:49%;
+
   width:5.1%;
 }
 
 .home-link:nth-of-type(2){
   left:54.7%;
+
   width:5%;
 }
 
 .home-link:nth-of-type(3){
   left:60%;
+
   width:5.8%;
 }
 
 .home-link:nth-of-type(4){
   left:66%;
+
   width:5.8%;
 }
 
 .home-link:nth-of-type(5){
   left:72%;
+
   width:5.5%;
 }
 
 .home-link:nth-of-type(6){
   left:78%;
+
   width:4.8%;
 }
 
 .home-link:nth-of-type(7){
   left:83.2%;
+
   width:5.2%;
 }
 
 .home-link:nth-of-type(8){
   left:89%;
+
   width:5.7%;
 }
 
 
-/* Desktop buttons */
+/* =========================================================
+   DESKTOP BUTTONS
+========================================================= */
 
 .submit-link{
   left:4%;
+
   top:69%;
 
   width:16.5%;
+
   height:8.5%;
 }
 
 .origin-link{
   left:21.2%;
+
   top:69%;
 
   width:14%;
+
   height:8.5%;
 }
 
@@ -320,63 +364,144 @@ body{
   }
 
 
-  /* -------------------------------------------------------
-     MOBILE BACKGROUND
-
-     Instead of stretching/cropping the desktop design,
-     the complete artwork is fitted to the phone.
-  ------------------------------------------------------- */
+  /* =======================================================
+     HIDE DESKTOP BACKGROUND IMAGE ON MOBILE
+  ======================================================= */
 
   .home-image{
-    width:100%;
-    height:100%;
-
-    object-fit:contain;
-
-    object-position:center center;
-
-    background:#dceeff;
+    display:none;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
+     LARGE TRANSPARENT FEP LOGO BACKGROUND
+  ======================================================= */
+
+  .home::before{
+
+    content:"";
+
+    position:absolute;
+
+    z-index:1;
+
+    top:50%;
+    left:50%;
+
+    width:88%;
+    height:88%;
+
+    transform:translate(-50%,-50%);
+
+    background-image:url("fep-logo.jpeg");
+
+    background-repeat:no-repeat;
+
+    background-position:center;
+
+    background-size:contain;
+
+    opacity:.10;
+
+    mix-blend-mode:multiply;
+
+    pointer-events:none;
+  }
+
+
+  /* =======================================================
+     MOBILE BRAND — TOP LEFT
+  ======================================================= */
+
+  .mobile-brand{
+
+    position:absolute;
+
+    top:18px;
+    left:18px;
+
+    z-index:100;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:9px;
+
+    color:#c79b27;
+
+    font-size:13px;
+
+    font-weight:900;
+
+    letter-spacing:.07em;
+
+    white-space:nowrap;
+  }
+
+
+  .mobile-brand img{
+
+    width:40px;
+    height:40px;
+
+    object-fit:contain;
+
+    border-radius:50%;
+
+    opacity:.95;
+  }
+
+
+  /* =======================================================
      HIDE DESKTOP NAV
-  ------------------------------------------------------- */
+  ======================================================= */
 
   .desktop-nav{
     display:none;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      HAMBURGER
-  ------------------------------------------------------- */
+  ======================================================= */
 
   .mobile-menu-button{
+
     display:flex;
 
     align-items:center;
+
     justify-content:center;
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      HIDE DESKTOP HOTSPOTS
-  ------------------------------------------------------- */
+  ======================================================= */
 
   .hotspot{
     display:none;
   }
 
 
-  /* -------------------------------------------------------
-     MOBILE TEXT / CONTENT OVERLAY
+  /* =======================================================
+     MOBILE MENU
+  ======================================================= */
 
-     This gives the important wording its own centered
-     position on phones so it cannot run off-screen.
-  ------------------------------------------------------- */
+  .mobile-menu{
+    z-index:90;
+  }
+
+
+  /* =======================================================
+     MOBILE CONTENT
+     
+     ORIGINAL WORDS ARE KEPT
+  ======================================================= */
 
   .mobile-content{
+
     position:absolute;
 
     z-index:30;
@@ -391,17 +516,25 @@ body{
     text-align:center;
 
     display:flex;
+
     flex-direction:column;
+
     align-items:center;
   }
 
 
+  /* =======================================================
+     MOBILE KICKER
+  ======================================================= */
+
   .mobile-kicker{
+
     margin-bottom:8px;
 
     color:#15568c;
 
     font-size:11px;
+
     font-weight:900;
 
     letter-spacing:.16em;
@@ -410,7 +543,12 @@ body{
   }
 
 
+  /* =======================================================
+     MOBILE TITLE
+  ======================================================= */
+
   .mobile-title{
+
     margin:0;
 
     color:#e4a900;
@@ -427,7 +565,12 @@ body{
   }
 
 
+  /* =======================================================
+     MOBILE TAGLINE
+  ======================================================= */
+
   .mobile-tagline{
+
     margin:18px 0 0;
 
     color:#0b527c;
@@ -440,7 +583,12 @@ body{
   }
 
 
+  /* =======================================================
+     MOBILE SUBTITLE
+  ======================================================= */
+
   .mobile-subtitle{
+
     margin:15px 0 0;
 
     color:#15568c;
@@ -457,16 +605,18 @@ body{
   }
 
 
-  /* -------------------------------------------------------
+  /* =======================================================
      MOBILE BUTTONS
-  ------------------------------------------------------- */
+  ======================================================= */
 
   .mobile-buttons{
+
     margin-top:25px;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     gap:10px;
@@ -476,9 +626,11 @@ body{
 
 
   .mobile-button{
+
     display:flex;
 
     align-items:center;
+
     justify-content:center;
 
     min-height:46px;
@@ -498,6 +650,7 @@ body{
 
 
   .mobile-button.primary{
+
     background:#086fc9;
 
     color:#fff;
@@ -508,6 +661,7 @@ body{
 
 
   .mobile-button.secondary{
+
     background:rgba(255,255,255,.75);
 
     color:#0b527c;
@@ -524,7 +678,26 @@ body{
 
 @media(max-width:390px){
 
+  .mobile-brand{
+
+    top:14px;
+    left:14px;
+
+    font-size:11px;
+
+    gap:7px;
+  }
+
+
+  .mobile-brand img{
+
+    width:36px;
+    height:36px;
+  }
+
+
   .mobile-menu-button{
+
     width:52px;
     height:52px;
 
@@ -536,6 +709,7 @@ body{
 
 
   .mobile-menu{
+
     top:78px;
 
     left:14px;
@@ -544,31 +718,37 @@ body{
 
 
   .mobile-content{
+
     width:92%;
   }
 
 
   .mobile-title{
+
     font-size:2.45rem;
   }
 
 
   .mobile-tagline{
+
     font-size:.95rem;
   }
 
 
   .mobile-subtitle{
+
     font-size:9px;
   }
 
 
   .mobile-buttons{
+
     gap:7px;
   }
 
 
   .mobile-button{
+
     padding:0 13px;
 
     font-size:10px;
@@ -584,6 +764,7 @@ body{
 @media(max-width:700px) and (min-height:800px){
 
   .mobile-content{
+
     top:47%;
   }
 
@@ -597,12 +778,33 @@ body{
 <body>
 
 
-<main class="home"
-      aria-label="Fontaine Empire Home">
+<main
+  class="home"
+  aria-label="Fontaine Empire Home">
 
 
   <!-- =====================================================
-       BACKGROUND IMAGE
+       MOBILE BRAND
+  ====================================================== -->
+
+  <div class="mobile-brand">
+
+    <img
+      src="fep-logo.jpeg"
+      alt="Fontaine Empire logo">
+
+    <span>
+      FONTAINE EMPIRE
+    </span>
+
+  </div>
+
+
+  <!-- =====================================================
+       DESKTOP BACKGROUND IMAGE
+
+       This remains exactly as before on desktop.
+       It is hidden only on mobile.
   ====================================================== -->
 
   <img
@@ -617,24 +819,41 @@ body{
        ONLY VISIBLE ON DESKTOP
   ====================================================== -->
 
-  <nav class="desktop-nav"
-       aria-label="Main navigation">
+  <nav
+    class="desktop-nav"
+    aria-label="Main navigation">
 
-    <a href="index.html">Home</a>
+    <a href="index.html">
+      Home
+    </a>
 
-    <a href="music.html">Music</a>
+    <a href="music.html">
+      Music
+    </a>
 
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html">
+      Gallery
+    </a>
 
-    <a href="artists.html">Artists</a>
+    <a href="artists.html">
+      Artists
+    </a>
 
-    <a href="merch.html">Merch</a>
+    <a href="merch.html">
+      Merch
+    </a>
 
-    <a href="apply.html">Apply</a>
+    <a href="apply.html">
+      Apply
+    </a>
 
-    <a href="about.html">About</a>
+    <a href="about.html">
+      About
+    </a>
 
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">
+      Contact
+    </a>
 
   </nav>
 
@@ -666,21 +885,37 @@ body{
     id="mobileMenu"
     aria-label="Mobile navigation">
 
-    <a href="index.html">Home</a>
+    <a href="index.html">
+      Home
+    </a>
 
-    <a href="music.html">Music</a>
+    <a href="music.html">
+      Music
+    </a>
 
-    <a href="gallery.html">Gallery</a>
+    <a href="gallery.html">
+      Gallery
+    </a>
 
-    <a href="artists.html">Artists</a>
+    <a href="artists.html">
+      Artists
+    </a>
 
-    <a href="merch.html">Merch</a>
+    <a href="merch.html">
+      Merch
+    </a>
 
-    <a href="apply.html">Apply</a>
+    <a href="apply.html">
+      Apply
+    </a>
 
-    <a href="about.html">About</a>
+    <a href="about.html">
+      About
+    </a>
 
-    <a href="contact.html">Contact</a>
+    <a href="contact.html">
+      Contact
+    </a>
 
   </nav>
 
@@ -688,7 +923,7 @@ body{
   <!-- =====================================================
        MOBILE CONTENT
 
-       This replaces the cramped desktop text on phones.
+       SAME WORDING AS BEFORE
   ====================================================== -->
 
   <section
@@ -702,22 +937,30 @@ body{
 
 
     <h1 class="mobile-title">
+
       FONTAINE<br>
+
       EMPIRE
+
     </h1>
 
 
     <p class="mobile-tagline">
+
       “Music to Save the World”
+
     </p>
 
 
     <p class="mobile-subtitle">
+
       The Sound. The Vision. The Empire.
+
     </p>
 
 
     <div class="mobile-buttons">
+
 
       <a
         class="mobile-button primary"
@@ -736,6 +979,7 @@ body{
 
       </a>
 
+
     </div>
 
   </section>
@@ -744,8 +988,9 @@ body{
   <!-- =====================================================
        DESKTOP CLICKABLE AREAS
 
-       These stay active on desktop.
+       THESE STAY ACTIVE ON DESKTOP ONLY
   ====================================================== -->
+
 
   <a
     class="hotspot home-link"
@@ -803,6 +1048,9 @@ body{
   </a>
 
 
+  <!-- DESKTOP BUTTONS -->
+
+
   <a
     class="hotspot submit-link"
     href="apply.html"
@@ -820,18 +1068,24 @@ body{
 </main>
 
 
+<!-- =======================================================
+     MOBILE MENU SCRIPT
+======================================================= -->
+
 <script>
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
 
 const menuButton =
   document.getElementById("mobileMenuButton");
 
+
 const mobileMenu =
   document.getElementById("mobileMenu");
 
+
+/* =========================================================
+   OPEN / CLOSE MENU
+========================================================= */
 
 menuButton.addEventListener("click", function(){
 
@@ -854,13 +1108,15 @@ menuButton.addEventListener("click", function(){
 
 
   menuButton.textContent =
-    opened ? "×" : "☰";
+    opened
+      ? "×"
+      : "☰";
 
 });
 
 
 /* =========================================================
-   CLOSE MOBILE MENU AFTER SELECTING A PAGE
+   CLOSE MENU AFTER SELECTING PAGE
 ========================================================= */
 
 const mobileLinks =
@@ -873,12 +1129,16 @@ mobileLinks.forEach(function(link){
 
     mobileMenu.classList.remove("open");
 
-    menuButton.textContent = "☰";
+
+    menuButton.textContent =
+      "☰";
+
 
     menuButton.setAttribute(
       "aria-expanded",
       "false"
     );
+
 
     menuButton.setAttribute(
       "aria-label",
@@ -904,12 +1164,16 @@ document.addEventListener("click", function(event){
 
     mobileMenu.classList.remove("open");
 
-    menuButton.textContent = "☰";
+
+    menuButton.textContent =
+      "☰";
+
 
     menuButton.setAttribute(
       "aria-expanded",
       "false"
     );
+
 
     menuButton.setAttribute(
       "aria-label",
@@ -924,4 +1188,5 @@ document.addEventListener("click", function(event){
 
 
 </body>
+
 </html>
