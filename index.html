@@ -5,42 +5,199 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>FONTAINE EMPIRE | Music to Save the World</title>
 <meta name="description" content="Fontaine Empire — Music to Save the World. The Sound. The Vision. The Empire.">
+
 <style>
 *{box-sizing:border-box}
-html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#dceeff}
-body{font-family:Arial,sans-serif}
-.home{position:relative;width:100vw;height:100vh;min-height:520px;overflow:hidden;background:#dceeff}
-.home-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;user-select:none;-webkit-user-drag:none}
-.hotspot{position:absolute;display:block;z-index:5;background:transparent;border:0;outline:0}
-.hotspot:focus-visible{outline:2px solid #1676c5;outline-offset:4px;border-radius:4px}
-.home-link{top:3.0%;height:5.8%}
-.home-link:nth-of-type(1){left:49.0%;width:5.1%}
-.home-link:nth-of-type(2){left:54.7%;width:5.0%}
-.home-link:nth-of-type(3){left:60.0%;width:5.8%}
-.home-link:nth-of-type(4){left:66.0%;width:5.8%}
-.home-link:nth-of-type(5){left:72.0%;width:5.5%}
-.home-link:nth-of-type(6){left:78.0%;width:4.8%}
-.home-link:nth-of-type(7){left:83.2%;width:5.2%}
-.home-link:nth-of-type(8){left:89.0%;width:5.7%}
-.submit-link{left:4.0%;top:69.0%;width:16.5%;height:8.5%}
-.origin-link{left:21.2%;top:69.0%;width:14.0%;height:8.5%}
-.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:700px){.home{min-height:0}.home-image{object-position:center center}.home-link{top:2.5%;height:7%}.submit-link{top:70%;left:5%;width:27%;height:9%}.origin-link{top:70%;left:33%;width:24%;height:9%}}
+
+html,body{
+  margin:0;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  background:#dceeff
+}
+
+body{
+  font-family:Arial,sans-serif
+}
+
+.home{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  min-height:520px;
+  overflow:hidden;
+  background:#dceeff
+}
+
+.home-image{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none
+}
+
+.hotspot{
+  position:absolute;
+  display:block;
+  z-index:5;
+  background:transparent;
+  border:0;
+  outline:0;
+  color:#000;
+  text-decoration:none;
+}
+
+.hotspot:focus-visible{
+  outline:2px solid #1676c5;
+  outline-offset:4px;
+  border-radius:4px
+}
+
+.home-link{
+  top:3.0%;
+  height:5.8%
+}
+
+.home-link:nth-of-type(1){
+  left:49.0%;
+  width:5.1%
+}
+
+.home-link:nth-of-type(2){
+  left:54.7%;
+  width:5.0%
+}
+
+.home-link:nth-of-type(3){
+  left:60.0%;
+  width:5.8%
+}
+
+.home-link:nth-of-type(4){
+  left:66.0%;
+  width:5.8%
+}
+
+.home-link:nth-of-type(5){
+  left:72.0%;
+  width:5.5%
+}
+
+.home-link:nth-of-type(6){
+  left:78.0%;
+  width:4.8%
+}
+
+.home-link:nth-of-type(7){
+  left:83.2%;
+  width:5.2%
+}
+
+.home-link:nth-of-type(8){
+  left:89.0%;
+  width:5.7%
+}
+
+.submit-link{
+  left:4.0%;
+  top:69.0%;
+  width:16.5%;
+  height:8.5%
+}
+
+.origin-link{
+  left:21.2%;
+  top:69.0%;
+  width:14.0%;
+  height:8.5%
+}
+
+@media(max-width:700px){
+
+  .home{
+    min-height:0
+  }
+
+  .home-image{
+    object-position:center center
+  }
+
+  .home-link{
+    top:2.5%;
+    height:7%
+  }
+
+  .submit-link{
+    top:70%;
+    left:5%;
+    width:27%;
+    height:9%
+  }
+
+  .origin-link{
+    top:70%;
+    left:33%;
+    width:24%;
+    height:9%
+  }
+
+}
 </style>
 </head>
+
 <body>
+
 <main class="home" aria-label="Fontaine Empire Home">
+
   <img class="home-image" src="home-reference.png" alt="Fontaine Empire homepage — Music to Save the World">
-  <a class="hotspot home-link" href="index.html" aria-label="Home"><span class="visully-seen">Home</span></a>
-  <a class="hotspot home-link" href="music.html" aria-label="Music"><span class="visually-hidden">Music</span></a>
-  <a class="hotspot home-link" href="gallery.html" aria-label="Gallery"><span class="visually-hidden">Gallery</span></a>
-  <a class="hotspot home-link" href="artists.html" aria-label="Artists"><span class="visually-hidden">Artists</span></a>
-  <a class="hotspot home-link" href="merch.html" aria-label="Merch"><span class="visually-hidden">Merch</span></a>
-  <a class="hotspot home-link" href="apply.html" aria-label="Apply"><span class="visually-hidden">Apply</span></a>
-  <a class="hotspot home-link" href="about.html" aria-label="About"><span class="visually-hidden">About</span></a>
-  <a class="hotspot home-link" href="contact.html" aria-label="Contact"><span class="visually-hidden">Contact</span></a>
-  <a class="hotspot submit-link" href="apply.html" aria-label="Submit Your Music"><span class="visually-hidden">Submit Your Music</span></a>
-  <a class="hotspot origin-link" href="about.html" aria-label="Our Origin Story"><span class="visually-hidden">Our Origin Story</span></a>
+
+  <a class="hotspot home-link" href="index.html" aria-label="Home">
+    <span>Home</span>
+  </a>
+
+  <a class="hotspot home-link" href="music.html" aria-label="Music">
+    <span>Music</span>
+  </a>
+
+  <a class="hotspot home-link" href="gallery.html" aria-label="Gallery">
+    <span>Gallery</span>
+  </a>
+
+  <a class="hotspot home-link" href="artists.html" aria-label="Artists">
+    <span>Artists</span>
+  </a>
+
+  <a class="hotspot home-link" href="merch.html" aria-label="Merch">
+    <span>Merch</span>
+  </a>
+
+  <a class="hotspot home-link" href="apply.html" aria-label="Apply">
+    <span>Apply</span>
+  </a>
+
+  <a class="hotspot home-link" href="about.html" aria-label="About">
+    <span>About</span>
+  </a>
+
+  <a class="hotspot home-link" href="contact.html" aria-label="Contact">
+    <span>Contact</span>
+  </a>
+
+  <a class="hotspot submit-link" href="apply.html" aria-label="Submit Your Music">
+    <span>Submit Your Music</span>
+  </a>
+
+  <a class="hotspot origin-link" href="about.html" aria-label="Our Origin Story">
+    <span>Our Origin Story</span>
+  </a>
+
 </main>
+
 </body>
 </html>
