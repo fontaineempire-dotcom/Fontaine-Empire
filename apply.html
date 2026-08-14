@@ -23,256 +23,68 @@ a{
   color:inherit;
 }
 
-/* =====================================================
-   NAVIGATION
-   ===================================================== */
-
+/* NAVIGATION */
 nav{
   height:76px;
   padding:0 4%;
   display:flex;
   align-items:center;
   justify-content:space-between;
-
   background:#ffffffee;
   backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-
   border-bottom:1px solid #cfeaf4;
-
   position:sticky;
   top:0;
-  z-index:10;
-
-  /* Space for the broken ice */
-  margin-bottom:42px;
-}
-
-/* BROKEN ICE ACROSS THE TOP/BOTTOM EDGE OF HEADER */
-nav::before{
-  content:"";
-
-  position:absolute;
-  left:0;
-  right:0;
-
-  bottom:-42px;
-
-  height:48px;
-
-  background-image:url("broken-ice.jpeg");
-  background-repeat:no-repeat;
-  background-position:center top;
-  background-size:100% 320px;
-
-  pointer-events:none;
-
-  /* Makes the white part of the image blend into the page */
-  mix-blend-mode:multiply;
-
-  opacity:.95;
-}
-
-/* Small icy highlight over the broken ice */
-nav::after{
-  content:"";
-
-  position:absolute;
-  left:0;
-  right:0;
-
-  bottom:-2px;
-
-  height:5px;
-
-  background:linear-gradient(
-    to right,
-    transparent,
-    rgba(210,246,255,.9),
-    #fff,
-    rgba(210,246,255,.9),
-    transparent
-  );
-
-  filter:blur(1px);
-
-  pointer-events:none;
+  z-index:5;
 }
 
 .brand{
   font-weight:900;
   letter-spacing:.08em;
-
   display:flex;
   align-items:center;
   gap:10px;
-
-  position:relative;
-  z-index:3;
 }
 
 .brand img{
   width:42px;
   height:42px;
-
   border-radius:50%;
   object-fit:contain;
-
-  box-shadow:
-    0 0 12px rgba(22,137,213,.25);
 }
 
 .links{
   display:flex;
   gap:16px;
-
   font-weight:700;
   font-size:14px;
-
-  position:relative;
-  z-index:3;
-}
-
-.links a{
-  position:relative;
-  padding-top:8px;
-}
-
-/* LITTLE SNOW ON EACH DESKTOP OPTION */
-.links a::before{
-  content:"";
-
-  position:absolute;
-
-  top:0;
-  left:-3px;
-  right:-3px;
-
-  height:8px;
-
-  background:
-    radial-gradient(
-      ellipse at 10% 100%,
-      #fff 0 35%,
-      transparent 37%
-    ),
-    radial-gradient(
-      ellipse at 30% 100%,
-      #e9faff 0 45%,
-      transparent 47%
-    ),
-    radial-gradient(
-      ellipse at 50% 100%,
-      #fff 0 42%,
-      transparent 44%
-    ),
-    radial-gradient(
-      ellipse at 72% 100%,
-      #e5f8ff 0 45%,
-      transparent 47%
-    ),
-    radial-gradient(
-      ellipse at 92% 100%,
-      #fff 0 35%,
-      transparent 37%
-    );
-
-  border-radius:50%;
-
-  filter:
-    drop-shadow(
-      0 2px 2px rgba(77,155,190,.35)
-    );
 }
 
 .links a:hover{
   color:#1689d5;
 }
 
-/* =====================================================
-   MOBILE MENU BUTTON
-   ===================================================== */
-
+/* MOBILE MENU */
 .menu-toggle{
   display:none;
-
-  position:relative;
-
   background:#fff;
-
   border:1px solid #b9dcea;
   border-radius:10px;
-
   padding:9px 12px;
-
   color:#0b527c;
   font-size:18px;
-
   cursor:pointer;
-
-  box-shadow:
-    0 5px 15px rgba(11,82,124,.12);
-}
-
-/* SNOW ON TOP OF HAMBURGER */
-.menu-toggle::before{
-  content:"";
-
-  position:absolute;
-
-  top:-6px;
-  left:3px;
-  right:3px;
-
-  height:12px;
-
-  background:
-    radial-gradient(
-      ellipse at 10% 100%,
-      #fff 0 35%,
-      transparent 37%
-    ),
-    radial-gradient(
-      ellipse at 30% 100%,
-      #e6f9ff 0 45%,
-      transparent 47%
-    ),
-    radial-gradient(
-      ellipse at 50% 100%,
-      #fff 0 42%,
-      transparent 44%
-    ),
-    radial-gradient(
-      ellipse at 72% 100%,
-      #e1f7ff 0 45%,
-      transparent 47%
-    ),
-    radial-gradient(
-      ellipse at 92% 100%,
-      #fff 0 35%,
-      transparent 37%
-    );
-
-  border-radius:50%;
-
-  filter:
-    drop-shadow(
-      0 2px 3px rgba(60,150,190,.4)
-    );
 }
 
 .mobile-links{
   display:none;
 }
 
-/* =====================================================
-   PAGE
-   ===================================================== */
-
+/* PAGE */
 .page{
   width:min(1100px,92%);
   margin:auto;
-  padding:35px 0 75px;
+  padding:75px 0;
 }
 
 .kicker{
@@ -295,18 +107,12 @@ h1{
   max-width:760px;
 }
 
-/* =====================================================
-   APPLICATION FORM
-   ===================================================== */
-
+/* APPLICATION FORM */
 form{
   max-width:800px;
-
   display:grid;
   grid-template-columns:1fr 1fr;
-
   gap:16px;
-
   margin-top:35px;
 }
 
@@ -327,23 +133,17 @@ label{
 input,
 textarea{
   padding:13px;
-
   border:1px solid #b9dcea;
   border-radius:10px;
-
   font:inherit;
-
   background:#fff;
-
   outline:none;
 }
 
 input:focus,
 textarea:focus{
   border-color:#1689d5;
-
-  box-shadow:
-    0 0 0 3px rgba(22,137,213,.12);
+  box-shadow:0 0 0 3px rgba(22,137,213,.12);
 }
 
 textarea{
@@ -353,19 +153,13 @@ textarea{
 
 .submit{
   grid-column:1/-1;
-
   border:0;
   border-radius:999px;
-
   padding:14px;
-
   background:#1689d5;
-
   color:#fff;
-
   font-weight:900;
   font-size:16px;
-
   cursor:pointer;
 }
 
@@ -373,108 +167,21 @@ textarea{
   background:#0b6fae;
 }
 
-/* =====================================================
-   FOOTER
-   ===================================================== */
-
+/* FOOTER */
 footer{
-  position:relative;
-
-  padding:65px 4% 28px;
-
+  padding:28px 4%;
+  border-top:1px solid #cfeaf4;
   display:flex;
   justify-content:space-between;
-
-  background:
-    linear-gradient(
-      #ffffff,
-      #e9faff
-    );
-
-  border-top:1px solid #cfeaf4;
-
-  overflow:visible;
 }
 
-/* BROKEN ICE ALONG TOP OF FOOTER */
-footer::before{
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  right:0;
-
-  top:-48px;
-
-  height:55px;
-
-  background-image:url("broken-ice.jpeg");
-
-  background-repeat:no-repeat;
-
-  background-position:center bottom;
-
-  background-size:100% 320px;
-
-  pointer-events:none;
-
-  mix-blend-mode:multiply;
-
-  opacity:.95;
-}
-
-/* ICY HIGHLIGHT */
-footer::after{
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  right:0;
-
-  top:-3px;
-
-  height:6px;
-
-  background:linear-gradient(
-    to right,
-    transparent,
-    rgba(210,246,255,.9),
-    #fff,
-    rgba(210,246,255,.9),
-    transparent
-  );
-
-  filter:blur(1px);
-
-  pointer-events:none;
-}
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
+/* MOBILE */
 @media(max-width:800px){
 
   nav{
     height:auto;
     min-height:72px;
-
     position:sticky;
-
-    margin-bottom:35px;
-  }
-
-  nav::before{
-    bottom:-35px;
-    height:42px;
-
-    background-size:auto 250px;
-  }
-
-  nav::after{
-    display:none;
   }
 
   .brand{
@@ -497,27 +204,16 @@ footer::after{
 
   .mobile-links{
     position:absolute;
-
     top:72px;
-
     left:4%;
     right:4%;
-
     display:none;
-
     flex-direction:column;
-
     gap:0;
-
     background:#fff;
-
     border:1px solid #cfeaf4;
-
     border-radius:0 0 14px 14px;
-
-    box-shadow:
-      0 12px 25px rgba(11,82,124,.12);
-
+    box-shadow:0 12px 25px rgba(11,82,124,.12);
     overflow:hidden;
   }
 
@@ -526,69 +222,13 @@ footer::after{
   }
 
   .mobile-links a{
-    position:relative;
-
-    padding:16px 18px;
-
+    padding:14px 18px;
     border-bottom:1px solid #e4f2f7;
-
     font-weight:800;
-  }
-
-  /* SNOW ON MOBILE MENU ITEMS */
-  .mobile-links a::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    left:8px;
-    right:8px;
-
-    height:8px;
-
-    background:
-      radial-gradient(
-        ellipse at 10% 100%,
-        #fff 0 35%,
-        transparent 37%
-      ),
-      radial-gradient(
-        ellipse at 30% 100%,
-        #e6f9ff 0 45%,
-        transparent 47%
-      ),
-      radial-gradient(
-        ellipse at 50% 100%,
-        #fff 0 42%,
-        transparent 44%
-      ),
-      radial-gradient(
-        ellipse at 72% 100%,
-        #e1f7ff 0 45%,
-        transparent 47%
-      ),
-      radial-gradient(
-        ellipse at 92% 100%,
-        #fff 0 35%,
-        transparent 37%
-      );
-
-    border-radius:50%;
-
-    filter:
-      drop-shadow(
-        0 2px 2px rgba(60,150,190,.35)
-      );
   }
 
   .mobile-links a:last-child{
     border-bottom:0;
-  }
-
-  .page{
-    padding-top:35px;
   }
 
   form{
@@ -602,23 +242,7 @@ footer::after{
 
   footer{
     flex-direction:column;
-
     gap:8px;
-
-    text-align:center;
-
-    padding-top:60px;
-  }
-
-  footer::before{
-    top:-42px;
-    height:48px;
-
-    background-size:auto 250px;
-  }
-
-  footer::after{
-    display:none;
   }
 }
 </style>
@@ -635,7 +259,6 @@ footer::after{
   </a>
 
   <div class="links">
-
     <a href="index.html">Home</a>
     <a href="music.html">Music</a>
     <a href="gallery.html">Gallery</a>
@@ -644,7 +267,6 @@ footer::after{
     <a href="apply.html">Apply</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-
   </div>
 
   <button
@@ -656,7 +278,6 @@ footer::after{
   </button>
 
   <div class="mobile-links">
-
     <a href="index.html">Home</a>
     <a href="music.html">Music</a>
     <a href="gallery.html">Gallery</a>
@@ -665,24 +286,18 @@ footer::after{
     <a href="apply.html">Apply</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-
   </div>
 
 </nav>
 
 <!-- APPLY PAGE -->
-
 <main>
 
 <section class="page">
 
-  <div class="kicker">
-    Artist Applications
-  </div>
+  <div class="kicker">Artist Applications</div>
 
-  <h1>
-    Apply
-  </h1>
+  <h1>Apply</h1>
 
   <p class="lead">
     Have a sound worth hearing?
@@ -692,106 +307,66 @@ footer::after{
   <form>
 
     <div class="field">
-
-      <label for="first-name">
-        First Name
-      </label>
-
+      <label for="first-name">First Name</label>
       <input
         id="first-name"
         name="first_name"
         type="text"
         autocomplete="given-name"
         required>
-
     </div>
 
-
     <div class="field">
-
-      <label for="last-name">
-        Last Name
-      </label>
-
+      <label for="last-name">Last Name</label>
       <input
         id="last-name"
         name="last_name"
         type="text"
         autocomplete="family-name"
         required>
-
     </div>
 
-
     <div class="field">
-
-      <label for="artist-name">
-        Artist Name
-      </label>
-
+      <label for="artist-name">Artist Name</label>
       <input
         id="artist-name"
         name="artist_name"
         type="text"
         required>
-
     </div>
 
-
     <div class="field">
-
-      <label for="email">
-        Email Address
-      </label>
-
+      <label for="email">Email Address</label>
       <input
         id="email"
         name="email"
         type="email"
         autocomplete="email"
         required>
-
     </div>
 
-
     <div class="field full">
-
-      <label for="phone">
-        Phone Number
-      </label>
-
+      <label for="phone">Phone Number</label>
       <input
         id="phone"
         name="phone"
         type="tel"
         autocomplete="tel"
         required>
-
     </div>
 
-
     <div class="field full">
-
-      <label for="genre">
-        Genre / Type of Music
-      </label>
-
+      <label for="genre">Genre / Type of Music</label>
       <input
         id="genre"
         name="genre"
         type="text"
         placeholder="e.g. Soca, Dancehall, Hip-Hop, R&B"
         required>
-
     </div>
 
-
-    <button
-      class="submit"
-      type="submit">
-
+    <button class="submit" type="submit">
       Submit Artist Application →
-
     </button>
 
   </form>
@@ -800,36 +375,21 @@ footer::after{
 
 </main>
 
-
 <!-- FOOTER -->
-
 <footer>
-
-  <span>
-    © 2026 FONTAINE EMPIRE
-  </span>
-
-  <span>
-    “Music to Save the World”
-  </span>
-
+  <span>© 2026 FONTAINE EMPIRE</span>
+  <span>“Music to Save the World”</span>
 </footer>
 
-
 <script>
-
-const toggle =
-  document.querySelector(".menu-toggle");
-
-const mobileMenu =
-  document.querySelector(".mobile-links");
+const toggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.querySelector(".mobile-links");
 
 if(toggle && mobileMenu){
 
   toggle.addEventListener("click", () => {
 
-    const isOpen =
-      mobileMenu.classList.toggle("open");
+    const isOpen = mobileMenu.classList.toggle("open");
 
     toggle.setAttribute(
       "aria-expanded",
@@ -839,7 +399,6 @@ if(toggle && mobileMenu){
   });
 
 }
-
 </script>
 
 </body>
